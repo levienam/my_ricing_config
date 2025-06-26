@@ -1,0 +1,5 @@
+nitrogen --restore &
+picom --config ~/.config/picom/picom.conf --daemon 2>/dev/null
+ &
+(sleep 1 && dunst) &
+(sleep 1 && tint2) &

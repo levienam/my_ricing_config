@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_config xmlns="http://openbox.org/3.4/rc">
+  <keyboard>
+    <!-- Terminal : Super + T -->
+    <keybind key="W-t">
+      <action name="Execute">
+        <command>zutty</command>
+      </action>
+    </keybind>
+    <!-- App Finder : Super + A -->
+    <keybind key="W-a">
+      <action name="Execute">
+        <command>xfce4-appfinder</command>
+      </action>
+    </keybind>
+    <keybind key="W-d">
+      <action name="GoToDesktop">
+        <to>next</to>
+        <wrap>yes</wrap>
+      </action>
+    </keybind>
+    <keybind key="W-f">
+      <action name="Execute">
+        <command>firefox</command>
+      </action>
+     </keybind>
+    <!-- Fermer une fenêtre : Super + Q -->
+    <keybind key="W-q">
+      <action name="Close"/>
+    </keybind>
+    <!-- contrôle du volume -->
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute">
+        <command>amixer sset Master 5%- unmute &amp;&amp; notify-send "🔉 Volume -" "5% de moins"</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioMute">
+      <action name="Execute">
+        <command>amixer sset Master toggle &amp;&amp; notify-send "🔇 Muet" "Commutation du son"</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute">
+        <command>amixer sset Master 5%+ unmute</command>
+      </action>
+    </keybind>
+    <!-- contrôle multimédia -->
+    <keybind key="XF86AudioPlay">
+      <action name="Execute">
+        <command>playerctl play-pause</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioNext">
+      <action name="Execute">
+        <command>playerctl next</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioPrev">
+      <action name="Execute">
+        <command>playerctl previous</command>
+      </action>
+    </keybind>
+  </keyboard>
+  <theme>
+    <keepBorder>yes</keepBorder>
+    <animateIconify>yes</animateIconify>
+    <titleLayout>NLIMC</titleLayout>
+    <font place="ActiveWindow">
+      <name>Sans</name>
+      <size>8</size>
+    </font>
+    <font place="InactiveWindow">
+      <name>Sans</name>
+      <size>8</size>
+    </font>
+    <font place="MenuHeader">
+      <name>Sans</name>
+      <size>8</size>
+    </font>
+    <font place="MenuItem">
+      <name>Sans</name>
+      <size>8</size>
+    </font>
+    <font place="ActiveOnScreenDisplay">
+      <name>Sans</name>
+      <size>8</size>
+    </font>
+    <font place="InactiveOnScreenDisplay">
+      <name>Sans</name>
+      <size>8</size>
+    </font>
+    <name>Arc-Clone</name>
+  </theme>
+  <desktops>
+    <number>2</number>
+    <firstdesk>1</firstdesk>
+    <names>
+      <name>Bureau 1</name>
+      <name>Bureau 2</name>
+    </names>
+    <popupTime>875</popupTime>
+  </desktops>
+  
+</openbox_config>
